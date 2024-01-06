@@ -142,8 +142,10 @@ function getAverage(arr) {
  *    isSameLength(['orange', 'banana', 'cherry']) => true
  *    isSameLength(['cat', 'dog', 'elephant']) => false
  */
-function isSameLength(/* arr */) {
-  throw new Error('Not implemented');
+function isSameLength(arr) {
+  const wordLength = arr[0].length;
+  const isEqual = (word) => word.length === wordLength;
+  return arr.every(isEqual);
 }
 
 /**
